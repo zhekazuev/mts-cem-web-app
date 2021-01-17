@@ -1,5 +1,7 @@
 This document will contain useful material for the project.
 
+## Materials
+
 ### Markdown Online Editor
 [Dillinger](https://dillinger.io/)
 
@@ -20,3 +22,6 @@ This document will contain useful material for the project.
 
 ### Docker
 [Основы Docker. Большой практический выпуск](https://www.youtube.com/watch?v=QF4ZF857m44)
+
+### Github
+[Совместная разработка в команде на GitHub](https://code.tutsplus.com/ru/articles/team-collaboration-with-github--net-29876)

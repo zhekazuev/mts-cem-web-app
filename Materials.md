@@ -50,5 +50,5 @@ This document will contain useful material for the project.
 - [Про Git, Github и Gitflow простыми словами](https://proglib.io/p/git-github-gitflow)
 - [Пожалуйста, перестаньте рекомендовать Git Flow](https://habr.com/ru/company/flant/blog/491320/)
 - [Модель ветвления Gitflow](https://bitworks.software/2019-03-12-gitflow-workflow.html)
-- [Руководство по командной разработке с Git](ttps://tproger.ru/translations/git-style-guide/)
+- [Руководство по командной разработке с Git](https://tproger.ru/translations/git-style-guide/)
 - [Hello World](https://guides.github.com/activities/hello-world/)

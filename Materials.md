@@ -11,8 +11,11 @@ This document will contain useful material for the project.
 
 ### Flask
 [How to Easily Deploy Machine Learning Models Using Flask](https://www.kdnuggets.com/2019/10/easily-deploy-machine-learning-models-using-flask.html)
+
 [Деплоим ML проект, используя Flask как REST API, и делаем доступным через приложение на Flutter](https://habr.com/ru/post/460995/)
+
 [How to Deploy Machine Learning Models using Flask (with Code!)](https://www.analyticsvidhya.com/blog/2020/04/how-to-deploy-machine-learning-model-flask/)
+
 [How to Build a Machine Learning API with Python and Flask](https://www.statworx.com/ch/blog/how-to-build-a-machine-learning-api-with-python-and-flask/)
 
 ### Docker

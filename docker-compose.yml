@@ -1,0 +1,24 @@
+version: '3.6'
+
+volumes:
+  csv_files:
+  redis_data:
+
+services:
+  cache:
+    image: redis:4.0.10
+    volumes:
+      - redis_data:/data
+  web:
+    build: web/
+    command: bash -c "gunicorn demosite.wsgi:application -b 0.0.0.0:8000"
+    volumes:
+      - .:/code
+    depends_on:
+      - cache
+  nginx:
+    build: nginx/
+    ports:
+      - "8000:8000"
+    depends_on:
+      - web

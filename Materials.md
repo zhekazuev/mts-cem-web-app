@@ -16,6 +16,11 @@ This document will contain useful material for the project.
 - [How to Deploy Machine Learning Models using Flask (with Code!)](https://www.analyticsvidhya.com/blog/2020/04/how-to-deploy-machine-learning-model-flask/)
 - [How to Build a Machine Learning API with Python and Flask](https://www.statworx.com/ch/blog/how-to-build-a-machine-learning-api-with-python-and-flask/)
 
+[Python Flask Microservice](https://github.com/ssola/python-flask-microservice). This is the code used in this series of articles:
+- [Building Microservices with Python. Part 1](https://medium.com/@ssola/building-microservices-with-python-part-i-5240a8dcc2fb)
+- [Building Microservices with Python, Part 2](https://medium.com/@ssola/building-microservices-with-python-part-2-9f951199094a)
+- [Building Microservices with Python, Part 3](https://medium.com/@ssola/building-microservices-with-python-part-3-a556a4c4bc00)
+
 ## Docker
 - [Основы Docker. Большой практический выпуск](https://www.youtube.com/watch?v=QF4ZF857m44)
 

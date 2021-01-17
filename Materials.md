@@ -10,12 +10,15 @@ This document will contain useful material for the project.
 ### Django
 - [How to create an analytics dashboard in a Django app](https://www.freecodecamp.org/news/how-to-create-an-analytics-dashboard-in-django-app/)
 - [Heroku](https://www.heroku.com/pricing)
+- [Django Microservices within Docker](https://stackoverflow.com/questions/51855075/django-microservices-within-docker/51855227)
+- [Packaging a Django App Using Docker, NGINX, and Gunicorn](https://www.pluralsight.com/guides/packaging-a-django-app-using-docker-nginx-and-gunicorn)
 ### Flask
 - [How to Easily Deploy Machine Learning Models Using Flask](https://www.kdnuggets.com/2019/10/easily-deploy-machine-learning-models-using-flask.html)
 - [Деплоим ML проект, используя Flask как REST API, и делаем доступным через приложение на Flutter](https://habr.com/ru/post/460995/)
 - [How to Deploy Machine Learning Models using Flask (with Code!)](https://www.analyticsvidhya.com/blog/2020/04/how-to-deploy-machine-learning-model-flask/)
 - [How to Build a Machine Learning API with Python and Flask](https://www.statworx.com/ch/blog/how-to-build-a-machine-learning-api-with-python-and-flask/)
-
+### Python
+- [Контейнеризация в Python. Часть 1](https://medium.com/nuances-of-programming/контейнеризация-в-python-часть-1-582ec5cc0110)
 [Python Flask Microservice](https://github.com/ssola/python-flask-microservice). This is the code used in this series of articles:
 - [Building Microservices with Python. Part 1](https://medium.com/@ssola/building-microservices-with-python-part-i-5240a8dcc2fb)
 - [Building Microservices with Python, Part 2](https://medium.com/@ssola/building-microservices-with-python-part-2-9f951199094a)
@@ -23,7 +26,29 @@ This document will contain useful material for the project.
 
 ## Docker
 - [Основы Docker. Большой практический выпуск](https://www.youtube.com/watch?v=QF4ZF857m44)
+- [Изучаем Docker, часть 1: основы](https://habr.com/ru/company/ruvds/blog/438796/)
+- [Изучаем Docker, часть 2: термины и концепции](https://habr.com/ru/company/ruvds/blog/439978/)
+- [Изучаем Docker, часть 3: файлы Dockerfile](https://habr.com/ru/company/ruvds/blog/439980/)
+- [Изучаем Docker, часть 4: уменьшение размеров образов и ускорение их сборки](https://habr.com/ru/company/ruvds/blog/440658/)
+- [Изучаем Docker, часть 5: команды](https://habr.com/ru/company/ruvds/blog/440660/)
+- [Изучаем Docker, часть 6: работа с данными](https://habr.com/ru/company/ruvds/blog/441574/)
+- [Dockerizing Flask Microservices for Deployment](https://mikebridge.github.io/post/python-flask-kubernetes-3/)
+- [Mastering Microservices with Python, Flask, and Docker](https://cloudacademy.com/course/mastering-microservices-with-python-flask-docker-1118/course-introduction/)
+- [Dockerizing Flask With Compose and Machine – From Localhost to the Cloud](https://realpython.com/dockerizing-flask-with-compose-and-machine-from-localhost-to-the-cloud/)
+- [MicroServices with Docker](http://containertutorials.com/docker-compose.html)
+- [How to Deploy Microservices with Docker](https://www.linode.com/docs/guides/deploying-microservices-with-docker/)
+- [Упаковка простого Flask приложения в Docker контейнер](https://cloud.croc.ru/blog/byt-v-teme/flask-prilozheniya-v-docker/)
+- [Создание и развертывание приложения Flask с использованием Docker в Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-18-04-ru)
+- [Мега-Учебник Flask, Часть XIX: Развертывание на основе Docker-контейнеров](https://habr.com/ru/post/353234/)
+- [Dockerize your Flask Application](https://runnable.com/docker/python/dockerize-your-flask-application)
+- [Containerized Python Development – Part 1](https://www.docker.com/blog/containerized-python-development-part-1/)
+- [Containerized Python Development – Part 2](https://www.docker.com/blog/containerized-python-development-part-2/)
 
 ## Github
 - [Совместная разработка в команде на GitHub](https://code.tutsplus.com/ru/articles/team-collaboration-with-github--net-29876)
 - [Никита Соболев — Автоматизируем все с Github Actions](https://www.youtube.com/watch?v=QoCSvwkP_lQ)
+- [Про Git, Github и Gitflow простыми словами](https://proglib.io/p/git-github-gitflow)
+- [Пожалуйста, перестаньте рекомендовать Git Flow](https://habr.com/ru/company/flant/blog/491320/)
+- [Модель ветвления Gitflow](https://bitworks.software/2019-03-12-gitflow-workflow.html)
+- [Руководство по командной разработке с Git](ttps://tproger.ru/translations/git-style-guide/)
+- [Hello World](https://guides.github.com/activities/hello-world/)

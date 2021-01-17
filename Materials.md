@@ -24,3 +24,4 @@ This document will contain useful material for the project.
 
 ### Github
 - [Совместная разработка в команде на GitHub](https://code.tutsplus.com/ru/articles/team-collaboration-with-github--net-29876)
+- [Никита Соболев — Автоматизируем все с Github Actions](https://www.youtube.com/watch?v=QoCSvwkP_lQ)

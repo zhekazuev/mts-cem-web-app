@@ -1,0 +1,315 @@
+service timestamps debug datetime localtime
+service timestamps log datetime localtime
+service password-encryption
+no service dhcp
+!
+hostname CIS-2950-SW01-Sigma
+!
+no logging console
+aaa new-model
+aaa group server radius RL-RADSRVRS
+ server 10.10.10.15 auth-port 1812 acct-port 1813
+!
+aaa authentication login RL-RADIUS group RL-RADSRVRS local-case enable
+aaa authorization exec RL-RADIUS group RL-RADSRVRS local if-authenticated
+aaa accounting suppress null-username
+aaa accounting update newinfo
+aaa accounting exec default start-stop group RL-RADSRVRS
+aaa accounting exec RL-RADIUS start-stop group RL-RADSRVRS
+aaa accounting connection RL-RADIUS start-stop group RL-RADSRVRS
+aaa accounting system default start-stop group RL-RADSRVRS
+enable secret 5 $1$yC2E$oKNTSBJy6X49pgd6jWWFP.
+enable password 7 1104290953014814572E0D74
+!
+username admin privilege 15 secret 5 $1$XEfC$nkwkzCM72ZExRAnjyCbOS.
+username rladmin privilege 15 password 7 030D5620013579445F105A0156
+clock timezone EET 2
+clock summer-time EEST recurring last Sun Mar 3:00 last Sun Oct 3:00
+ip subnet-zero
+no ip igmp snooping vlan 727
+!
+ip dhcp snooping vlan 800
+ip dhcp snooping vlan 825
+no ip domain-lookup
+ip domain-name RAPIDLINK.MD
+ip ssh time-out 120
+ip ssh authentication-retries 3
+vtp domain rapidlink.md
+vtp mode transparent
+!
+!
+spanning-tree mode rapid-pvst
+no spanning-tree optimize bpdu transmission
+spanning-tree extend system-id
+!
+!
+!
+!
+vlan 200
+ name MGMT
+!
+vlan 309,340
+!
+vlan 500
+ name WAN_Fenosa
+!
+vlan 501
+ name WAN2
+!
+vlan 800
+ name NET-Clients4
+!
+vlan 825
+ name Clients_NET2
+!
+vlan 828
+ name Client0176828
+!
+interface FastEthernet0/1
+ description Best_Invest-BDEC
+ switchport access vlan 340
+ switchport mode access
+ storm-control broadcast level 40.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+!
+interface FastEthernet0/2
+ description MedSec_Padurii26
+ switchport access vlan 309
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky 4c5e.0cc9.afd5
+ storm-control broadcast level 15.00
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree bpdufilter enable
+!
+interface FastEthernet0/3
+ description Med-SEC_Padurilor20
+ switchport access vlan 309
+ switchport mode access
+ storm-control broadcast level 15.00
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/4
+ description Sigma_Of.615
+ switchport access vlan 800
+ switchport mode access
+ switchport port-security violation restrict
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky d8fe.e3c9.d984
+ load-interval 60
+ storm-control broadcast level 25.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/5
+ description Med-SEC_Uzinelor210
+ switchport access vlan 309
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky 4c5e.0cc9.b287
+ load-interval 60
+ storm-control broadcast level 15.00
+ storm-control action shutdown
+ storm-control action trap
+ no cdp enable
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/6
+ description InvestCredit Zelinski 7
+ switchport access vlan 340
+ switchport mode access
+ storm-control broadcast level 40.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/7
+ description Uzinelor210_Obiecte_speciale
+ switchport access vlan 800
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky 48ee.0ccf.8847
+ load-interval 60
+ storm-control broadcast level 25.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/8
+ description Svitol-Art_ELAT
+ switchport access vlan 800
+ switchport mode access
+ switchport port-security
+ switchport port-security maximum 10
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky 1c5f.2b5e.0df2
+ load-interval 60
+ storm-control broadcast level 25.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/9
+ description Gagarina 5/1 Exenge
+ switchport access vlan 825
+ switchport mode access
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky ec22.80f3.5654
+ load-interval 60
+ storm-control broadcast level 25.00
+ storm-control action shutdown
+ storm-control action trap
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ ip dhcp snooping limit rate 10
+!
+interface FastEthernet0/10
+ description CIS-2950-et5-179
+ switchport trunk allowed vlan 200,800,825,828
+ switchport mode trunk
+ speed 100
+ duplex full
+ ip dhcp snooping trust
+!
+interface FastEthernet0/11
+ shutdown
+!
+interface FastEthernet0/12
+ shutdown
+!
+interface FastEthernet0/13
+ shutdown
+!
+interface FastEthernet0/14
+ shutdown
+!
+interface FastEthernet0/15
+ shutdown
+!
+interface FastEthernet0/16
+ shutdown
+!
+interface FastEthernet0/17
+ shutdown
+!
+interface FastEthernet0/18
+ shutdown
+!
+interface FastEthernet0/19
+ shutdown
+!
+interface FastEthernet0/20
+ shutdown
+!
+interface FastEthernet0/21
+ shutdown
+!
+interface FastEthernet0/22
+ shutdown
+!
+interface FastEthernet0/23
+ shutdown
+!
+interface FastEthernet0/24
+ shutdown
+!
+interface GigabitEthernet0/1
+ description CIS-2950-et5-179
+ switchport trunk allowed vlan 200,800,825,828
+ switchport mode trunk
+ speed 100
+ duplex full
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/2
+ description CIS-3750-Argus-36
+ switchport trunk allowed vlan 200,309,340,800,825,828
+ switchport mode trunk
+ load-interval 30
+ ip dhcp snooping trust
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+ shutdown
+!
+interface Vlan200
+ description RL-MGMT
+ ip address 10.10.10.178 255.255.255.0
+ no ip route-cache
+!
+ip default-gateway 10.10.10.1
+no ip http server
+logging trap notifications
+logging facility syslog
+logging 172.22.22.250
+access-list 23 permit 172.22.22.250
+access-list 23 permit 172.22.22.78
+access-list 23 permit 10.10.10.0 0.0.0.255
+access-list 23 deny   any
+access-list 99 permit 10.10.10.0 0.0.0.255
+access-list 99 permit 172.22.22.0 0.0.0.255
+access-list 99 permit 194.247.165.240 0.0.0.15
+access-list 99 deny   any log
+snmp-server engineID local 000000090200000750BD43C0
+snmp-server community RaDWiN2009RO RO 23
+snmp-server community RaDWiN2009RW RW 23
+snmp-server trap link ietf
+snmp-server trap-source Vlan200
+snmp-server location 76, Decebal, Chisinau, Moldova
+snmp-server contact admin@rapidlink.md
+snmp-server enable traps snmp warmstart linkdown linkup coldstart
+snmp-server enable traps port-security
+snmp-server enable traps MAC-Notification
+snmp-server enable traps envmon temperature
+snmp-server host 10.20.30.100 RaDWiN2009TR
+snmp-server file-transfer access-group 23 protocol tftp
+snmp-server tftp-server-list 23
+radius-server host 10.10.10.15 auth-port 1812 acct-port 1813 key 7 011D26404B1C0258724B
+radius-server retransmit 0
+alias exec i show ip interface brief
+alias exec port sh interfaces status
+!
+line con 0
+line vty 0 4
+ access-class 99 in
+ exec-timeout 5 0
+ authorization exec RL-RADIUS
+ accounting connection RL-RADIUS
+ login authentication RL-RADIUS
+ transport preferred ssh
+ transport input ssh
+line vty 5 15
+ access-class 99 in
+ exec-timeout 5 0
+ authorization exec RL-RADIUS
+ accounting connection RL-RADIUS
+ login authentication RL-RADIUS
+ transport preferred ssh
+ transport input ssh
+!
+ntp clock-period 17179865
+ntp peer 10.10.10.70 source Vlan200 prefer
+!
+end

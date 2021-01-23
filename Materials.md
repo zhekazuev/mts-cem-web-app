@@ -45,6 +45,7 @@ This document will contain useful material for the project.
 - [Containerized Python Development – Part 2](https://www.docker.com/blog/containerized-python-development-part-2/)
 
 ## Github
+- [How to git](https://githowto.com/ru)
 - [Совместная разработка в команде на GitHub](https://code.tutsplus.com/ru/articles/team-collaboration-with-github--net-29876)
 - [Никита Соболев — Автоматизируем все с Github Actions](https://www.youtube.com/watch?v=QoCSvwkP_lQ)
 - [Про Git, Github и Gitflow простыми словами](https://proglib.io/p/git-github-gitflow)

@@ -44,7 +44,7 @@ This document will contain useful material for the project.
 - [Containerized Python Development – Part 1](https://www.docker.com/blog/containerized-python-development-part-1/)
 - [Containerized Python Development – Part 2](https://www.docker.com/blog/containerized-python-development-part-2/)
 
-## Github
+## Git
 - [How to git](https://githowto.com/ru)
 - [Совместная разработка в команде на GitHub](https://code.tutsplus.com/ru/articles/team-collaboration-with-github--net-29876)
 - [Никита Соболев — Автоматизируем все с Github Actions](https://www.youtube.com/watch?v=QoCSvwkP_lQ)
@@ -53,3 +53,7 @@ This document will contain useful material for the project.
 - [Модель ветвления Gitflow](https://bitworks.software/2019-03-12-gitflow-workflow.html)
 - [Руководство по командной разработке с Git](https://tproger.ru/translations/git-style-guide/)
 - [Hello World](https://guides.github.com/activities/hello-world/)
+- [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
+- [Организация хранения кода в GitLab и интеграция код ревью в GitFlow](https://habr.com/ru/company/neoflex/blog/425315/)
+- [Шпаргалка по git-flow](https://danielkummer.github.io/git-flow-cheatsheet/index.ru_RU.html)
+- [Удачная модель ветвления для Git](https://habr.com/ru/post/106912/)
